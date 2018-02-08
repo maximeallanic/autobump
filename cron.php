@@ -45,10 +45,14 @@ foreach($data->threads as $thread){
                 }
                 logout($webClient);
             }
+            else
+                echo "No reply button";
         }else{
             $thread->lastActivityAt=$lastPost->at;
         }
     }
+    else
+        echo "Your not older than 24hour";
 
 }
 saveData();

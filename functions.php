@@ -20,7 +20,7 @@ function login(&$WebClient){
         loadAllThreads();
     }
     $dataToPost=    "user=". $data->settings->username .
-                    "&passwrd=". base64_decode($data->settings->password) .
+                    "&passwrd=". $data->settings->password .
                     "&cookieLength=". $data->settings->cookieLength .
                     "&hash_passwrd=";
 
@@ -123,8 +123,11 @@ function getPosts($html,$url,$debug=false){
     $dom=str_get_html($html);
     $replies=$dom->find("#quickModForm table tbody tr");
     $toplinks=$dom->find(".mirrortab_back a");
-    $threadNav=array();
-    foreach($toplinks as $toplink){
+    print_r(count($toplinks));
+    $threadNav=array(
+        "Reply" => "$url;action=post;num_replies=1"
+    );
+    foreach($toplinks as $toplink) {
         $threadNav[$toplink->plaintext]=$toplink->href;
     }
 
@@ -235,10 +238,12 @@ function bumpIt(&$webClient,$replyURL){
     if($html===false){
         return false;
     }
+    echo $replyURL;
     $dom=str_get_html($html);
     $postInput=$dom->find("#postmodify input");
     $postSelect=$dom->find("#postmodify select");
     $form=$dom->find("#postmodify")[0];
+    print_r(count($dom->find("#postmodify")));
     $formSubmitURL=$form->getAttribute("action");
 
     $postData=array();
