@@ -1,0 +1,34 @@
+{
+    "users": [
+        {
+            "username": "Hudod1945",
+            "cookie": {
+                "PHPSESSID": "sfgsd",
+                "SMFCookie129": "a%3A4%3A%7Bi%3A0%3Bs%3A7%3A%221477685%22%3Bi%3A1%3Bs%3A40%3A%222fcc4ad7801ea5c6a5a258aeec82488e168167b7%22%3Bi%3A2%3Bi%"
+            }
+        },
+        {
+            "username": "Cittle",
+            "cookie": {
+                "PHPSESSID": "ucejq49cs1nkc6s5sn8sboi471",
+                "SMFCookie129": "a%3A4%3A%7Bi%3A0%3Bs%3A7%3A%221476468%22%3Bi%3A1%3Bs%3A40%3A%22800a43100ad0ae5a74f765b77a3936993251281e%22%"
+            }
+        }
+    ],
+    "threads": [
+        {
+            "id": "23319",
+            "messages": [
+                {
+                    "from": "Hudod1945",
+                    "message": "Hi"
+                },
+                {
+                    "from": "Cittle",
+                    "message": "Hi Hudod1945",
+                    "sended": true
+                }
+            ]
+        }
+    ]
+}
